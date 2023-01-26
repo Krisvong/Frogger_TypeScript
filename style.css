@@ -1,0 +1,19 @@
+.wrapper {
+    border: 5px solid black;
+
+    /* position element at the center of its parent element */
+    top: 50%;
+    left: 50%;
+
+    /*position the element relative to its nearest positioned ancestor, instead of being positioned according to the normal flow of the document*/
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    /*move the element upward and to the left by 50% of its own width and height, effectively centering it within its parent element. */
+    transform: translate(-50%, -50%);
+
+    background: url('assets/images/background.png');
+
+}
