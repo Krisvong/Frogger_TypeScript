@@ -18,11 +18,15 @@ class Frogger {
         this.frameY = 0;
     }
     update(){
+        console.log('update');
         }
       
     draw(){
         ctx3.fillStyle = 'green';
         ctx3.fillRect(this.x, this.y, this.width, this.height);
+    }
+    jump(){
+        console.log('jump')
     }
     }
 
