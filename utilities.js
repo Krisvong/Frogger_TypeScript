@@ -2,16 +2,17 @@
 
 //clear multiple canvas elements starting at (0,0) ending at canvas width and height
 function animate(){
-    ctx1.clearRect(0, 0, canvas.width, canvas.height);
+    ctx3.clearRect(0, 0, canvas.width, canvas.height);
     frogger.draw();
     frogger.update();
+    handleObstacles();
  //recursion
     requestAnimationFrame(animate);
-
 }
 animate();
 
 //event listeners
+
 window.addEventListener('keydown', function(e){
     keys = [];
     // access the element of the keys array at the index of the keycode. if any of the arrow keys are pressed, call jump method.

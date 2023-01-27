@@ -14,7 +14,7 @@
     /*move the element upward and to the left by 50% of its own width and height, effectively centering it within its parent element. */
     transform: translate(-50%, -50%);
 
-    background: url('assets/images/background.png');
+    background: url('/assets/images/Frogger/background.png');
 
 }
 

@@ -61,7 +61,7 @@ class Frogger {
         ctx3.fillRect(this.x, this.y, this.width, this.height);
     }
     jump(){
-        console.log('jump')
+        console.log('jump');
     }
     }
 
