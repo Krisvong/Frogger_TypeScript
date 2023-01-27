@@ -21,5 +21,20 @@ window.addEventListener('keydown', function(e){
     }
 });
 
+//when key is released, reset the moving property to false and frameX to 0, so that the animation stops and frameX is set back to default.
+window.addEventListener('keyup', function(e){
+    delete keys[e.keyCode];
+    frogger.moving = false;
+    frogger.frameX = 0;
+});
+
+//when frogger reaches top of screen: update score, increase game speed, reset frogger position
+function scored(){
+    score++;
+    gameSpeed += 0.05;
+    frogger.x = canvas.width/2 - frogger.width/2;
+    frogger.y = canvas.height - frogger.height - 40;
+}
+
 
 
