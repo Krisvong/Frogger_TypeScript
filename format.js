@@ -49,3 +49,9 @@ const carsArray = [];
 //array to hold logs and turtles
 const logsArray = [];
 
+//images
+const background_lvl2 = new Image();
+background_lvl2.src = '/assets/images/Frogger/background_lvl2.png';
+
+const grass = new Image();
+grass.src = '/assets/images/Frogger/grass.png';
