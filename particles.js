@@ -29,6 +29,17 @@ class Particle {
             this.radius -= 0.14;
         }
     }
+    //cause the ripple to appear to expand and fade out over time.
+    ripple(){
+        if (this.radius < 50){
+            this.radius += 0.5;
+            this.x -= 0.1;
+            this.y -= 0.1;
+        }
+        if (this.opacity > 0){
+            this.opacity -= 0.005;
+        }
+    }
 }
 
 function handleParticles(){
@@ -45,10 +56,25 @@ function handleParticles(){
         }
     }
     // Check if any of the arrow keys are being pressed and if frogger is on the road. If both true, add ten new particles to the beginning of the particle array using the unshfit method.
-    if (((keys[37] || keys [38] || keys[39] || keys[40])) && frogger.y > 100 && particlesArray.length < maxParticles + 10){
+    if (((keys[37] || keys [38] || keys[39] || keys[40])) && frogger.y > 250 && particlesArray.length < maxParticles + 10){
         for (let i = 0; i < 10; i++){
             particlesArray.unshift(new Particle(frogger.x, frogger.y));
         }
-
+    }
+    //water ripples
+    for (let i = 0; i < ripplesArray.length; i++){
+        ripplesArray[i].ripple();
+        ripplesArray[i].draw();
+    }
+    if (ripplesArray.length > 20){
+        for(let i = 0; i < 30; i++){
+            ripplesArray.pop()
+        }
+    }
+//If arrow keys are pressed and frogger is over river, add twenty new ripples to the array.
+    if (((keys[37] || keys[38] || keys[39] || keys[40])) && frogger.y < 250){
+         for (let i = 0; i < 20; i++){
+            ripplesArray.unshift(new Particle(frogger.x, frogger.y));
+         }
     }
 }
