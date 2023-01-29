@@ -14,8 +14,8 @@ class Obstacle {
     }
 //draw obstacle    
     draw(){
-        ctx1.fillStyle = 'blue';
-        ctx1.fillRect(this.x, this.y, this.width, this.height);
+        ctx3.fillStyle = 'blue';
+        ctx3.fillRect(this.x, this.y, this.width, this.height);
        } 
 //update the position of the obstacle on the canvas. Increase x-coordinate by its speed multiplied by game speed    
 

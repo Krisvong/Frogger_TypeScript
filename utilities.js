@@ -15,6 +15,7 @@ function animate(){
     frogger.update();
     
     handleObstacles();
+    handleScoreBoard();
     ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height);    
  //recursion
     requestAnimationFrame(animate);
@@ -44,6 +45,19 @@ function scored(){
     gameSpeed += 0.05;
     frogger.x = canvas.width/2 - frogger.width/2;
     frogger.y = canvas.height - frogger.height - 40;
+}
+
+//create the score board centered on the x and y axis on canvas  4
+function handleScoreBoard(){
+    ctx4.fillStyle = 'black';
+    ctx4.strokeStyle = 'black';
+    ctx4.font = '15px Verdana';
+    ctx4.strokeText('Score', 265, 15);
+    ctx4.font = '60px Verdana';
+    ctx4.fillText(score, 270, 65);
+    ctx4.font = '15px Verdana';
+    ctx4.strokeText('Collisions: ' + collisionsCount, 10, 175);
+    ctx4.strokeText('Game Speed: ' + gameSpeed.toFixed(1), 10, 195)
 }
 
 
