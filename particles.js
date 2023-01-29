@@ -1,8 +1,8 @@
 //create dust trail on dry land
 class Particle {
     constructor(x, y){
-        this.x = x;
-        this.y = y;
+        this.x = x + 25;
+        this.y = y + 25;
         this.radius = Math.random() * 20 + 1; //size of particle
         this.opacity = 1; //color fade
         this.directionX = Math.random() * 1 - 0.5; //particle spreads
