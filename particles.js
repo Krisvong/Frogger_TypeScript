@@ -84,7 +84,7 @@ function handleRipples(){
     if (((keys[37] || keys[38] || keys[39] || keys[40])) && frogger.y < 250 && frogger.y > 100){
          for (let i = 0; i < 20; i++){
             ripplesArray.unshift(new Particle(frogger.x, frogger.y));
-         }
+       }
     }
 }
     

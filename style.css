@@ -1,7 +1,7 @@
 .wrapper {
-    border: 5px solid black;
-
-    /* position element at the center of its parent element */
+    border: 5px solid black; 
+    
+/* position element at the center of its parent element */
     top: 50%;
     left: 50%;
 

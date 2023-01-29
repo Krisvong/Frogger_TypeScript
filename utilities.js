@@ -2,7 +2,11 @@
 
 //clear multiple canvas elements starting at (0,0) ending at canvas width and height
 function animate(){
+    ctx1.clearRect(0, 0, canvas.width, canvas.height);
+    ctx2.clearRect(0, 0, canvas.width, canvas.height);
     ctx3.clearRect(0, 0, canvas.width, canvas.height);
+    ctx4.clearRect(0, 0, canvas.width, canvas.height);
+    ctx5.clearRect(0, 0, canvas.width, canvas.height);
     
     handleRipples()
     ctx2.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height);
@@ -10,7 +14,7 @@ function animate(){
     frogger.draw();
     frogger.update();
     
-// handleObstacles();
+    handleObstacles();
     ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height);    
  //recursion
     requestAnimationFrame(animate);

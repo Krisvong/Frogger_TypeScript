@@ -17,9 +17,10 @@ class Frogger {
         this.frameX = 0;
         this.frameY = 0;
     }
+
     update(){
         //if frogger not moving, when up arrow key is pressed, decrease y position (move up), change frameX to 1 and frame Y to 0 (first row)
-        if (keys[38]) {//up
+        if (keys[38]) { //up
         if(this.moving === false){
             this.y -= grid;
             this.moving = true;
@@ -28,7 +29,7 @@ class Frogger {
         }
     }
        //if frog is not moving, y position is less than canvas height minus twice it's own height, increase frogger's y position (move down) when down arrow key is pressed, change frame of sprite sheet to frame 3 (fourth row).
-       if (keys[40]) {//down
+       if (keys[40]) { //down
             if(this.moving === false && /*prevent frogger from leaving screen*/ this.y < canvas.height - this.height * 2) {
                 this.y += grid;
                 this.moving = true;
@@ -36,7 +37,7 @@ class Frogger {
             }
         }
         //if frogger is not moving, x position is greater than width, decrease frogger's x position (move left) when left arrow key is pressed, change frame of sprite sheet to frame 2 (third row).
-        if (keys[37]) {//left
+        if (keys[37]) { //left
             if(this.moving === false && this.x > this.width){
                 this.x -= grid;
                 this.moving = true;
@@ -44,7 +45,7 @@ class Frogger {
             }
         }
         //if frogger is not moving, x position is less than canvas width minus twice it's own width, increase frogger's x position (move right), change frame of sprite sheet to 1 (second row).
-        if (keys[39]){//right
+        if (keys[39]){ //right
             if (this.moving === false && this.x < canvas.width - this.width * 2) {
                 this.x += grid;
                 this.moving = true;
@@ -53,7 +54,6 @@ class Frogger {
         }
         // if frogger reaches top of screen, call scored() to add point;
         if (this.y < 0) scored();
-        
         }
       
     draw(){
