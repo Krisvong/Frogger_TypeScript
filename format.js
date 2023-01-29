@@ -36,7 +36,6 @@ let score = 0;
 let collisionsCount = 0;
 let frame = 0;
 let gameSpeed = 1;
-let numberOfCars = [];
 const resultDisplay = document.querySelector('#result')
 
 //array to hold all particles objects for dust effects
@@ -58,4 +57,14 @@ const grass = new Image();
 grass.src = '/assets/images/Frogger/grass.png';
 
 const collisions = new Image();
-collisions.src ='/assets/images/Frogger/collisions.png';
+collisions.src = '/assets/images/Frogger/collisions.png';
+
+const turtle = new Image();
+turtle.src = '/assets/images/Frogger/turtles.png';
+
+const log = new Image();
+log.src = '/assets/images/Frogger/log.png';
+
+const car = new Image();
+car.src = '/assets/images/Frogger/cars.png';
+let numberOfCars = 30;

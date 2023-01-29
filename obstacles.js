@@ -12,15 +12,25 @@ class Obstacle {
         this.randomize = Math.floor(Math.random() * 30 + 30);
         this.carType = (Math.floor(Math.random() * numberOfCars));
     }
-//draw obstacle    
+    //draw obstacle    
     draw(){
-        ctx3.fillStyle = 'blue';
-        ctx3.fillRect(this.x, this.y, this.width, this.height);
-       } 
-//update the position of the obstacle on the canvas. Increase x-coordinate by its speed multiplied by game speed    
+        //draw and animate turtle: turtle sprite sheet is 140px X 280px. One frame = 70px X 70px.
+        if (this.type === 'turtle'){
+            if (frame % this.randomize === 0){
+                if (this.frameX >= 1) this.frameX = 0;
+                else this.frameX++;
+        }
+        ctx1.drawImage(turtle, this.frameX * 70, this.frameY * 70, 70, 70, this.x, this.y, this.width, this.height);
+     } else if (this.type === 'log'){
+        ctx1.drawImage(log, this.x, this.y, this.width, this.height);
+     }
+        // ctx3.fillStyle = 'blue';
+        // ctx3.fillRect(this.x, this.y, this.width, this.height);
+    } 
+    //update the position of the obstacle on the canvas. Increase x-coordinate by its speed multiplied by game speed    
 
     update(){
-//update position of cars so they reappears on the left and right sides of the canvas
+    //update position of cars so they reappears on the left and right sides of the canvas
         this.x += this.speed * gameSpeed;
         if(this.speed > 0){
            if (this.x > canvas.width + this.width){

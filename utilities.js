@@ -7,7 +7,6 @@ function animate(){
     ctx3.clearRect(0, 0, canvas.width, canvas.height);
     ctx4.clearRect(0, 0, canvas.width, canvas.height);
     ctx5.clearRect(0, 0, canvas.width, canvas.height);
-    
     handleRipples()
     ctx2.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height);
     handleParticles();
@@ -16,7 +15,8 @@ function animate(){
     
     handleObstacles();
     handleScoreBoard();
-    ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height);    
+    ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height);
+    frame++;    
  //recursion
     requestAnimationFrame(animate);
 }
