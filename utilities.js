@@ -14,7 +14,7 @@ function animate(){
     frogger.draw();
     frogger.update();
     
-    // handleObstacles();
+    handleObstacles();
     handleScoreBoard();
     ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height);    
  //recursion
@@ -39,7 +39,7 @@ window.addEventListener('keyup', function(e){
     frogger.frameX = 0;
 });
 
-//when frogger reaches top of screen: update score, increase game speed, reset frogger position
+//when frogger reaches top of screen: update score, increase game speed, reset frogger position.
 function scored(){
     score++;
     gameSpeed += 0.05;
@@ -47,7 +47,7 @@ function scored(){
     frogger.y = canvas.height - frogger.height - 40;
 }
 
-//create the score board centered on the x and y axis on canvas  4
+//create the score board centered on the x and y axis on canvas  4.
 function handleScoreBoard(){
     ctx4.fillStyle = 'black';
     ctx4.strokeStyle = 'black';
@@ -58,6 +58,14 @@ function handleScoreBoard(){
     ctx4.font = '15px Verdana';
     ctx4.strokeText('Collisions: ' + collisionsCount, 10, 175);
     ctx4.strokeText('Game Speed: ' + gameSpeed.toFixed(1), 10, 195)
+}
+
+//collision detection: reusable function that takes two arguments to check if frogger collides with cars. Returns true if none of these conditions is true, meaning that first and second objects are colliding.
+function collision(first, second){
+    return !(first.x > second.x + second.width || 
+              first.x + first.width < second.x ||
+              first.y > second.y + second.height ||
+              first.y + first.height < second.y);
 }
 
 

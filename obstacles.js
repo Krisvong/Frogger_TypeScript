@@ -74,5 +74,12 @@ function handleObstacles(){
         logsArray[i].update();
         logsArray[i].draw();
     }
+    //collision with car: check for collision with cars, if collision is true, draw second image from collisions sprite sheet and scale it down to frogger size. Reset game.
+    for (let i = 0; i < carsArray.length; i++){
+        if(collision(frogger, carsArray[i])){
+            ctx4.drawImage(collisions, 0, 100, 100, 100, frogger.x, frogger.y, 50, 50);
+            resetGame();
+        }
+    }
 }
 
