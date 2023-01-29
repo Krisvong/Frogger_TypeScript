@@ -37,6 +37,7 @@ let collisionsCount = 0;
 let frame = 0;
 let gameSpeed = 1;
 let numberOfCars = [];
+const resultDisplay = document.querySelector('#result')
 
 //array to hold all particles objects for dust effects
 const particlesArray = [];

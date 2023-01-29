@@ -45,6 +45,7 @@ function scored(){
     gameSpeed += 0.05;
     frogger.x = canvas.width/2 - frogger.width/2;
     frogger.y = canvas.height - frogger.height - 40;
+    resultDisplay.textContent = 'Woo Hoo! Keep Going!';
 }
 
 //create the score board centered on the x and y axis on canvas  4.
@@ -68,5 +69,13 @@ function collision(first, second){
               first.y + first.height < second.y);
 }
 
+function resetGame(){
+   frogger.x = canvas.width/2 - frogger.width/2;
+   frogger.y = canvas.height - frogger.height - 40;
+   score = 0;
+   collisionsCount++;
+   gameSpeed = 1; 
+   resultDisplay.textContent = 'Good Luck!';
+}
 
 
