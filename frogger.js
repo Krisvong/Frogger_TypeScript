@@ -55,10 +55,12 @@ class Frogger {
         // if frogger reaches top of screen, call scored() to add point;
         if (this.y < 0) scored();
         }
-      
+
+    //draw frogger  
     draw(){
         ctx3.fillStyle = 'green';
         ctx3.fillRect(this.x, this.y, this.width, this.height);
+        ctx3.drawImage(froggerSprite, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x - 25, this.y - 25, this.width * 2, this.height * 2);
     }
     jump(){
         console.log('jump');
