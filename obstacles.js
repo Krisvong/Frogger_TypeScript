@@ -6,11 +6,11 @@ class Obstacle {
         this.width = width;
         this.height = height;
         this.speed = speed;
-        this.type = type;
-        this.frameX = 0;
-        this.frameY = 0;
+        this.type = type; /*car, log, or turtle*/
+        this.frameX = 0; /*animation*/ 
+        this.frameY = 0; /*animation*/ 
         this.randomize = Math.floor(Math.random() * 30 + 30);
-        this.carType = (Math.floor(Math.random() * numberOfCars));
+        this.carType = (Math.floor(Math.random() * numberOfCars)); /*choose random car image*/
     }
     //draw obstacle    
     draw(){
@@ -20,25 +20,31 @@ class Obstacle {
                 if (this.frameX >= 1) this.frameX = 0;
                 else this.frameX++;
         }
-        ctx1.drawImage(turtle, this.frameX * 70, this.frameY * 70, 70, 70, this.x, this.y, this.width, this.height);
-     } else if (this.type === 'log'){
-        ctx1.drawImage(log, this.x, this.y, this.width, this.height);
-     }
-        // ctx3.fillStyle = 'blue';
-        // ctx3.fillRect(this.x, this.y, this.width, this.height);
+            ctx1.drawImage(turtle, this.frameX * 70, this.frameY * 70, 70, 70, this.x, this.y, this.width, this.height);
+        //draw log
+        }else if (this.type === 'log'){
+            ctx1.drawImage(log, this.x, this.y, this.width, this.height);
+       //draw car and use carType to randomize car from rows of car images
+        } else {
+            ctx2.fillRect(this.x, this.y, this.width, this.height)
+            ctx2.drawImage(car, this.frameX * this.width, this.carType * this.height, grid * 2, grid, this.x, this.y, this.width, this.height);
+       }
     } 
-    //update the position of the obstacle on the canvas. Increase x-coordinate by its speed multiplied by game speed    
 
+    //update the position of the obstacle on the canvas. Increase x-coordinate by its speed multiplied by game speed    
     update(){
-    //update position of cars so they reappears on the left and right sides of the canvas
+    //update position of cars so they reappear on the left and right sides of the canvas choosing a different car image each time it reappears.
         this.x += this.speed * gameSpeed;
-        if(this.speed > 0){
+        if(this.speed > 0){ //moves right
            if (this.x > canvas.width + this.width){
                this.x = 0 - this.width;
+               this.carType = (Math.floor(Math.random() * numberOfCars));
            }
-        } else {
-        if (this.x < 0 - this.width){
-            this.x = canvas.width + this.width;
+        } else { //moves left
+           this.frameX = 1;
+           if (this.x < 0 - this.width){
+               this.x = canvas.width + this.width;
+               this.cartype = (Math.floor(Math.random() * numberOfCars));
            }
          }
        }   

@@ -67,4 +67,4 @@ log.src = '/assets/images/Frogger/log.png';
 
 const car = new Image();
 car.src = '/assets/images/Frogger/cars.png';
-let numberOfCars = 30;
+let numberOfCars = 3;
