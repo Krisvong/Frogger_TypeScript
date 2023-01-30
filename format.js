@@ -36,8 +36,9 @@ let score = 0;
 let collisionsCount = 0;
 let frame = 0;
 let gameSpeed = 1;
-const resultDisplay = document.querySelector('#result')
+let safe = false;
 
+const resultDisplay = document.querySelector('#result')
 //array to hold all particles objects for dust effects
 const particlesArray = [];
 //variable to limit amout of Particles to prevent performance issues

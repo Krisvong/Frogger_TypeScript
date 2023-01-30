@@ -75,7 +75,6 @@ function resetGame(){
    score = 0;
    collisionsCount++;
    gameSpeed = 1; 
-   resultDisplay.textContent = 'Good Luck!';
 }
 
 

@@ -94,6 +94,27 @@ function handleObstacles(){
     for (let i = 0; i < carsArray.length; i++){
         if(collision(frogger, carsArray[i])){
             ctx4.drawImage(collisions, 0, 100, 100, 100, frogger.x, frogger.y, 50, 50);
+            resultDisplay.textContent = 'Watch out for cars!';
+            resetGame();
+        }
+    }
+    //collisions with logs/turtles:
+    //check to see if frogger is in river area
+    if (frogger.y < 250 && frogger.y > 100) {
+        //frogger is only safe if colliding with log or turtle
+        safe = false;
+        //check for a collision between frogger and elements in logs array, if frogger collides with element from array, update x-coordinate of frogger by the speed of current object in the logs array.
+        for (let i = 0; i < logsArray.length; i++) {
+            if (collision(frogger, logsArray[i])){
+                frogger.x += logsArray[i].speed;
+                safe = true;
+            }
+        }
+        if (!safe){
+            for (let i = 0; i < 30; i++){
+                ripplesArray.unshift(new Particle(frogger.x, frogger.y));
+            }
+            resultDisplay.textContent = 'This frog cannot swim!';
             resetGame();
         }
     }
