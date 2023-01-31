@@ -72,3 +72,6 @@ let numberOfCars = 3;
 
 const froggerSprite = new Image();
 froggerSprite.src = '/assets/images/Frogger/frog_spritesheet.png';
+
+const jumpSound = document.createElement('audio');
+jumpSound.src = '/assets/images/sounds/jump_sound.ogg';

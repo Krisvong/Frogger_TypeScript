@@ -26,7 +26,6 @@ class Obstacle {
             ctx1.drawImage(log, this.x, this.y, this.width, this.height);
        //draw car and use carType to randomize car from rows of car images
         } else {
-            ctx2.fillRect(this.x, this.y, this.width, this.height)
             ctx2.drawImage(car, this.frameX * this.width, this.carType * this.height, grid * 2, grid, this.x, this.y, this.width, this.height);
        }
     } 
