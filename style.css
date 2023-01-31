@@ -1,3 +1,8 @@
+body {
+    background-image: url('/assets/images/Frogger/tire_tracks.jpeg');
+    background-repeat: no-repeat;
+    background-position: top 60vh right ;
+}
 .wrapper {
     border: 5px solid black; 
     
