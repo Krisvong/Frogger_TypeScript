@@ -94,6 +94,7 @@ function handleObstacles(){
         if(collision(frogger, carsArray[i])){
             ctx4.drawImage(collisions, 0, 100, 100, 100, frogger.x, frogger.y, 50, 50);
             resultDisplay.textContent = 'Watch out for cars!';
+            splatSound.play();
             resetGame();
         }
     }
@@ -112,6 +113,7 @@ function handleObstacles(){
         if (!safe){
             for (let i = 0; i < 30; i++){
                 ripplesArray.unshift(new Particle(frogger.x, frogger.y));
+                waterSound.play()
             }
             resultDisplay.textContent = 'This frog cannot swim!';
             resetGame();

@@ -46,6 +46,7 @@ function scored(){
     frogger.x = canvas.width/2 - frogger.width/2;
     frogger.y = canvas.height - frogger.height - 40;
     resultDisplay.textContent = 'Woo Hoo! Keep Going!';
+    winSound.play();
 }
 
 //create the score board centered on the x and y axis on canvas  4.
@@ -75,6 +76,7 @@ function resetGame(){
    score = 0;
    collisionsCount++;
    gameSpeed = 1; 
+   coinSound.play();
 }
 
 
