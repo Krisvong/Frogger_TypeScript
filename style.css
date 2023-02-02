@@ -1,8 +1,10 @@
 body {
-    background-image: url('/assets/images/Frogger/tire_tracks.jpeg');
-    background-repeat: no-repeat;
-    background-position: top 60vh right ;
+    background-image: url('/assets/images/Frogger/tire_tracks.jpeg'),url('/assets/images/Frogger/Froggerlogo.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 60vh right, top 45vh left;
+    background-size: 80vh, 55vh;
 }
+
 .wrapper {
     border: 5px solid black; 
     
@@ -20,7 +22,6 @@ body {
     transform: translate(-50%, -50%);
 
     background: url('/assets/images/Frogger/background.png');
-
 }
 
 canvas {
@@ -33,7 +34,12 @@ canvas {
 
 h3 {
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     font-family: 'Press Start 2P', cursive;
+    color: black;
 }
+
+
+
+
 
