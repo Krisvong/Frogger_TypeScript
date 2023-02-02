@@ -1,8 +1,9 @@
 body {
-    background-image: url('/assets/images/Frogger/tire_tracks.jpeg'),url('/assets/images/Frogger/Froggerlogo.png');
-    background-repeat: no-repeat, no-repeat;
-    background-position: top 60vh right, top 45vh left;
-    background-size: 80vh, 55vh;
+    background-image: url('/assets/images/Frogger/tire_tracks.jpeg'),url('/assets/images/Frogger/Froggerlogo.png'), url('/assets/images/Frogger/frogjumpup.png'), url('/assets/images/Frogger/frogjump.png'), url('/assets/images/Frogger/Froggerlogo.png'), url('/assets/images/Frogger/tire_tracks_reverse.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: top 60vh right, top 45vh left, top 2vh right, top 90vh left, top 45vh right, top 3vh left;
+    background-size: 80vh, 55vh, 8vh, 7vh, 55vh, 80vh;
+    /* background-color: slategrey; */
 }
 
 .wrapper {
@@ -37,6 +38,10 @@ h3 {
     font-size: 35px;
     font-family: 'Press Start 2P', cursive;
     color: black;
+}
+
+#text {
+
 }
 
 
