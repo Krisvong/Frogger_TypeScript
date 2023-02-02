@@ -1,10 +1,29 @@
 body {
-    background-image: url('/assets/images/Frogger/tire_tracks.jpeg'),url('/assets/images/Frogger/Froggerlogo.png'), url('/assets/images/Frogger/frogjumpup.png'), url('/assets/images/Frogger/frogjump.png'), url('/assets/images/Frogger/Froggerlogo.png'), url('/assets/images/Frogger/tire_tracks_reverse.png');
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-    background-position: top 60vh right, top 45vh left, top 2vh right, top 90vh left, top 45vh right, top 3vh left;
-    background-size: 80vh, 55vh, 8vh, 7vh, 55vh, 80vh;
-    /* background-color: slategrey; */
+    background-image: 
+    /* url('assets/images/Frogger/allInOne.png'),
+    url('assets/images/Frogger/allInOneGrassLeft.png'), */
+    /* url('assets/images/Frogger/sky.png'); */
+    url('assets/images/Frogger/sky2.png');
+    background-repeat: 
+    no-repeat;
+   
+    background-position: 
+    /* top 52vh right,
+    top 52vh left,
+    top 0vh right; */
+    /* top 0vh left; */
+
 }
+   
+    /* background-size: 
+    80vh, 
+    55vh, 
+    8vh, 
+    7vh, 
+    55vh, 
+    80vh; */ 
+    
+
 
 .wrapper {
     border: 5px solid black; 
@@ -40,9 +59,6 @@ h3 {
     color: black;
 }
 
-#text {
-
-}
 
 
 
