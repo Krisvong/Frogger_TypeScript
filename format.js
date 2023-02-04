@@ -66,22 +66,22 @@ const logsArray = [];
 
 //images
 const background_lvl2 = new Image();
-background_lvl2.src = '/assets/images/Frogger/background_lvl2.png';
+background_lvl2.src = './assets/images/Frogger/background_lvl2.png';
 
 const grass = new Image();
-grass.src = '/assets/images/Frogger/grass.png';
+grass.src = './assets/images/Frogger/grass.png';
 
 const collisions = new Image();
-collisions.src = '/assets/images/Frogger/collisions.png';
+collisions.src = './assets/images/Frogger/collisions.png';
 
 const turtle = new Image();
-turtle.src = '/assets/images/Frogger/turtles.png';
+turtle.src = './assets/images/Frogger/turtles.png';
 
 const log = new Image();
-log.src = '/assets/images/Frogger/log.png';
+log.src = './assets/images/Frogger/log.png';
 
 const car = new Image();
-car.src = '/assets/images/Frogger/cars.png';
+car.src = './assets/images/Frogger/cars.png';
 let numberOfCars = 3;
 
 const froggerSprite = new Image();
