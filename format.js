@@ -38,6 +38,18 @@ let frame = 0;
 let gameSpeed = 1;
 let safe = false;
 
+//typewriter text variables
+const textDisplay = document.getElementById('text');
+const phrases = ['We \u2665 Frogger!', 'Ribbit Ribbit', 'Go Frogger!', 'Look at Frogger Go!','\u2665' ];
+let i = 0;
+let j = 0;
+let currentPhrase = [];
+let isDeleting = false;
+let isEnd = false;
+const spedUp = Math.random() * (80 - 50) + 50;
+const normalSpeed = Math.random() * (300 - 200) + 200;
+const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
+
 
 const resultDisplay = document.querySelector('#result');
 //array to hold all particles objects for dust effects
