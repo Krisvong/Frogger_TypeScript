@@ -85,19 +85,19 @@ car.src = '/assets/images/Frogger/cars.png';
 let numberOfCars = 3;
 
 const froggerSprite = new Image();
-froggerSprite.src = '/assets/images/Frogger/frog_spritesheet.png';
+froggerSprite.src = './assets/images/Frogger/frog_spritesheet.png';
 
 const jumpSound = document.createElement('audio');
-jumpSound.src = '/assets/images/sounds/jump_sound.ogg';
+jumpSound.src = './assets/images/sounds/jump_sound.ogg';
 
 const waterSound = document.createElement('audio');
-waterSound.src = '/assets/images/sounds/cannon_miss.ogg';
+waterSound.src = './assets/images/sounds/cannon_miss.ogg';
 
 const coinSound = document.createElement('audio');
-coinSound.src = '/assets/images/sounds/sound-frogger-coin-in.wav';
+coinSound.src = './assets/images/sounds/sound-frogger-coin-in.wav';
 
 const splatSound = document.createElement('audio');
-splatSound.src = '/assets/images/sounds/cartoon-splat-6086.mp3';
+splatSound.src = './assets/images/sounds/cartoon-splat-6086.mp3';
 
 const winSound = document.createElement('audio');
-winSound.src = '/assets/images/sounds/winfretless.ogg';
+winSound.src = './assets/images/sounds/winfretless.ogg';
