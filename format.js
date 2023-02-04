@@ -1,6 +1,7 @@
 //canvas set up
 //global variables
 //sprite references
+//sound effects
 
 //create five canvas elements, get each one by its id(canvas1-canvas5).
 //get the 2D rendering context of the canvas element and set the width and height of each canvas element to 600 X 600 pixels.
@@ -40,15 +41,15 @@ let safe = false;
 
 //typewriter text variables
 const textDisplay = document.getElementById('text');
-const phrases = ['We \u2665 Frogger!', 'Ribbit Ribbit', 'Go Frogger!', 'Look at Frogger Go!','\u2665' ];
-let i = 0;
-let j = 0;
+const phrases = ['We \u2665 Frogger!', 'Ribbit Ribbit', 'Go Frogger!', 'Look at Frogger Go!','\u2665 \u2665 \u2665 \u2665'];
+let i = 0; /*keep track of which phrase in the 'phrases' array is currently being displayed(first phrase will be displayed*/
+let j = 0; /*keep track of which letter in the current phrase is being displayed(animation will start with first letter of first phrase)*/
 let currentPhrase = [];
-let isDeleting = false;
-let isEnd = false;
-const spedUp = Math.random() * (80 - 50) + 50;
-const normalSpeed = Math.random() * (300 - 200) + 200;
-const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
+let isDeleting = false; /*animation will start by adding letters to the current phrase*/
+let isEnd = false; 
+const spedUp = Math.random() * (80 - 50) + 50; /* random number between 50 and 80 used to set the speed of animation when it is deleting letters from the current phrase*/
+const normalSpeed = Math.random() * (300 - 200) + 200; /*random number between 200 and 300 used to set the speed of the animation when it is adding letters to the current phrase*/
+const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed; /*sets the speed of animation: isEnd=true then time = 2000. isDeleting = true then time = spedUp. If neither true time is constant.*/
 
 
 const resultDisplay = document.querySelector('#result');

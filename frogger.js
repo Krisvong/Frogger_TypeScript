@@ -1,4 +1,4 @@
-//create the frog object, set it's starting position and size , and also the sprite sheet's parameters
+//create the frog object, set it's starting position and size and also the sprite sheet's parameters
 class Frogger {
     constructor(){
         //width of one frame = sprite sheet is 500px wide with two columns
@@ -60,13 +60,14 @@ class Frogger {
     draw(){
         ctx3.drawImage(froggerSprite, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x - 25, this.y - 25, this.width * 2, this.height * 2);
     }
+    //change the frames of frogger depending on if jumping or not. If jumping, play the jump sound.
     jump(){
         if (this.moving === false) this.frameX = 1;
         else if (this.frameX === 1) this.frameX = 0;
         jumpSound.play();
     }
     }
-
+//create instance of the Frogger class to control the object on the canvas
 const frogger = new Frogger();
 
 

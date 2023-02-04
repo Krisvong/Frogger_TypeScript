@@ -31,6 +31,8 @@ h3 {
     font-size: 35px;
     font-family: 'Press Start 2P', cursive;
     color: black;
+    text-shadow:1px 1px 4px rgb(122, 189, 87);
+    padding-top: 3vh;
 }
 
 #text {
@@ -40,8 +42,6 @@ h3 {
     padding-top: 25vh;
     color: rgb(122, 189, 87);
     text-shadow: 1px 1px 2px black;
-
-    
 }
 
 html { 
@@ -50,7 +50,7 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
 
 
 

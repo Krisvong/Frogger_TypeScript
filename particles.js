@@ -71,10 +71,12 @@ function handleParticles(){
 }
 //water ripples
 function handleRipples(){
+    //iterate over the ripples array and call ripple and draw ripple methods on each object.
     for (let i = 0; i < ripplesArray.length; i++){
         ripplesArray[i].ripple();
         ripplesArray[i].drawRipple();
     }
+    //if the length of the ripples array is greater than twenty, remove the last five elements of the array.
     if (ripplesArray.length > 20){
         for (let i = 0; i < 5; i++){
             ripplesArray.pop()

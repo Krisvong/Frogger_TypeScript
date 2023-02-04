@@ -1,4 +1,4 @@
-//animation loops and event listeners
+//animation loops, functions and event listeners
 
 //clear multiple canvas elements starting at (0,0) ending at canvas width and height
 function animate(){
@@ -12,7 +12,6 @@ function animate(){
     handleParticles();
     frogger.draw();
     frogger.update();
-    
     handleObstacles();
     handleScoreBoard();
     ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height);

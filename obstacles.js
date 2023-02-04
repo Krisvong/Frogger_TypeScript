@@ -9,7 +9,7 @@ class Obstacle {
         this.type = type; /*car, log, or turtle*/
         this.frameX = 0; /*animation*/ 
         this.frameY = 0; /*animation*/ 
-        this.randomize = Math.floor(Math.random() * 30 + 30);
+        this.randomize = Math.floor(Math.random() * 30 + 30); /*random integer between 30 and 60 rounded down to nearest integer*/
         this.carType = (Math.floor(Math.random() * numberOfCars)); /*choose random car image*/
     }
     //draw obstacle    
@@ -30,17 +30,18 @@ class Obstacle {
        }
     } 
 
-    //update the position of the obstacle on the canvas. Increase x-coordinate by its speed multiplied by game speed    
+     //update position of cars so they reappear on the left and right sides of the canvas choosing a different car image each time it reappears.
     update(){
-    //update position of cars so they reappear on the left and right sides of the canvas choosing a different car image each time it reappears.
-        this.x += this.speed * gameSpeed;
-        if(this.speed > 0){ //moves right
+        this.x += this.speed * gameSpeed; /*change x coordinate of object and move it horizontally*/
+        if(this.speed > 0){ //moving right
+            //makes car reappear from the left of the canvas after it goes off canvas from the right. Changes type of car being drawn.
            if (this.x > canvas.width + this.width){
                this.x = 0 - this.width;
                this.carType = (Math.floor(Math.random() * numberOfCars));
            }
         } else { //moves left
-           this.frameX = 1;
+           this.frameX = 1; /*if car is going left, set the frameX to 1*/
+           //makes car reappear from the right of the canvas after it goes off canvas from the left. Changes type of car being drawn.
            if (this.x < 0 - this.width){
                this.x = canvas.width + this.width;
                this.cartype = (Math.floor(Math.random() * numberOfCars));
@@ -110,6 +111,7 @@ function handleObstacles(){
                 safe = true;
             }
         }
+        //check if frogger is in a safe position. If not safe, create 30 new particle objects with the x and y position of frogger. 
         if (!safe){
             for (let i = 0; i < 30; i++){
                 ripplesArray.unshift(new Particle(frogger.x, frogger.y));
