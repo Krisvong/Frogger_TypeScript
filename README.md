@@ -1,4 +1,4 @@
-# Frogger
+## Frogger
 
 ### Here is a link to the game: https://krisvong.github.io/Project1_Frogger/
 ### Here is a link to the github code: https://github.com/Krisvong/Project1_Frogger.git
@@ -18,7 +18,7 @@ This is my first project in the bootcamp I am taking. I hope to build on the gam
 * If Frogger falls off the log or turtle, the game will reset.
 * Once Frogger is safely across the river bank, Frogger will start over and speed of the obstacles will increase.
 
-# Credits
+## Credits
 I used a lot of resources to get this game done, specifically Franks Laboratory and Code with Ania Kubow. I also used Canva and Open Game Art.
 
 ## MIT License
