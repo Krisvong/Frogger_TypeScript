@@ -41,7 +41,7 @@ let safe = false;
 
 //typewriter text variables
 const textDisplay = document.getElementById('text');
-const phrases = ['We \u2665 Frogger!', 'Ribbit Ribbit', 'Go Frogger!', 'Look at Frogger Go!','\u2665 \u2665 \u2665 \u2665'];
+const phrases = ['We \u2665 Frogger!', 'Ribbit Ribbit', 'Go Frogger!', 'Jump Frogger Jump!','\u2665 \u2665 \u2665 \u2665'];
 let i = 0; /*keep track of which phrase in the 'phrases' array is currently being displayed(first phrase will be displayed*/
 let j = 0; /*keep track of which letter in the current phrase is being displayed(animation will start with first letter of first phrase)*/
 let currentPhrase = [];
