@@ -11,15 +11,15 @@ This is my first project in the bootcamp I am taking. I hope to build on the gam
 
 ## Rules of Frogger
 * You will start on the side of the road.
-* You will use the arrow keys to move Frogger up, down, left right.
+* You will use the arrow keys to move Frogger up, down, left and right.
 * The goal is to first get Frogger across the street without getting hit by a car.
 * If Frogger gets hit by a car, the game will reset.
-* Once Frogger is safely across the road you will need to get Frogger across the river using the logs and turtles to float.
+* Once Frogger is safely across the road, you will need to get Frogger across the river using the logs and turtles to float on.
 * If Frogger falls off the log or turtle, the game will reset.
 * Once Frogger is safely across the river bank, Frogger will start over and speed of the obstacles will increase.
 
 ## Credits
-I used a lot of resources to get this game done, specifically Franks Laboratory and Code with Ania Kubow. I also used Canva and Open Game Art.
+Special thanks to Franks Laboratory, Code with Ania Kubow, Canva, and Open Game Art for helping me get this project completed.
 
 ## MIT License
 Copyright (c) [2023] [Kristen von Gerichten]
