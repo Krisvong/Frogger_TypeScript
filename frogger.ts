@@ -1,5 +1,15 @@
 //create the frog object, set it's starting position and size and also the sprite sheet's parameters
 class Frogger {
+    spriteWidth: number;
+    spriteHeight: number;
+    width: number;
+    height: number;
+    x: number;
+    y: number;
+    moving: boolean; // Add the `moving` property
+    frameX: number; // Add the `frameX` property
+    frameY: number;
+
     constructor(){
         //width of one frame = sprite sheet is 500px wide with two columns
         this.spriteWidth = 250;
