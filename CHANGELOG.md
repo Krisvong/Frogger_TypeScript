@@ -3,6 +3,7 @@
 All notable changes to the Frogger game will be documented in this file.
 
 ### [Unreleased]
+- Add levels to the game
 
 ### [1.0.0] - 2023-07-05
 - Migrated the game from vanilla JavaScript to TypeScript
@@ -12,7 +13,6 @@ All notable changes to the Frogger game will be documented in this file.
 - Updated README to reflect the migration to TypeScript
 
 ### [0.2.0] - 2023-02-30
-- Added levels to the game
 - Increased the speed of obstacles in higher levels
 - Fixed bug related to log positioning in the river section
 - Improved collision detection logic for better gameplay experience
